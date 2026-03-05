@@ -1,117 +1,194 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.html">
-    <link rel="stylesheet" href="style.css">
-    <title>Bem-vindo au site de noticias de Uberladia </title>
-<style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Arquivos Municipais - Setor de Documentação Histórica</title>
+    <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #1d1d1d;
-            color: white;
+            font-family: 'Georgia', serif;
+            background: #0f0f0f;
+            color: #e0d9c0;
             margin: 0;
-            padding: 0;
+            padding: 40px;
+            line-height: 1.6;
         }
-
         header {
-            background-color: #333;
-            padding: 20px;
             text-align: center;
+            border-bottom: 1px solid #4a3c1e;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
         }
-
-        header h1 {
+        h1 {
+            color: #c9a96e;
+            letter-spacing: 3px;
             margin: 0;
-            font-size: 3em;
         }
-
-        nav {
-            background-color: #444;
-            padding: 10px;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
         .container {
+            max-width: 780px;
+            margin: 0 auto;
+        }
+        .notice {
+            background: #1a1200;
+            border: 1px solid #665022;
             padding: 20px;
+            margin: 30px 0;
+            font-style: italic;
         }
-
-        h2 {
-            color: #f2c600;
+        .hidden-section {
+            display: none;
         }
-
-        .game-list {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-top: 30px;
+        #secret-area {
+            background: #111;
+            border: 2px dashed #773300;
+            padding: 30px;
+            margin-top: 50px;
         }
-
-        .game-card {
-            background-color: #333;
-            padding: 15px;
-            border-radius: 10px;
+        #password-form {
             text-align: center;
+            margin: 40px 0;
         }
-
-        .game-card img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
+        input[type="password"] {
+            background: #000;
+            color: #ffcc66;
+            border: 1px solid #664400;
+            padding: 12px 20px;
+            font-size: 1.2em;
+            width: 280px;
+            font-family: monospace;
         }
-
-        .game-card h3 {
-            margin-top: 10px;
-            color: #f2c600;
+        button {
+            background: #4a3c1e;
+            color: #e0d9c0;
+            border: none;
+            padding: 12px 30px;
+            margin-left: 10px;
+            cursor: pointer;
+            font-size: 1.1em;
         }
-
-        footer {
-            background-color: #333;
-            text-align: center;
-            padding: 10px;
-            margin-top: 30px;
+        button:hover {
+            background: #665022;
         }
+        .document {
+            background: #1a0f00;
+            padding: 30px;
+            border: 1px solid #553300;
+            white-space: pre-wrap;
+            font-family: 'Courier New', monospace;
+            color: #d4b37e;
+        }
+        .clue {
+            color: #666;
+            font-size: 0.85em;
+            text-align: right;
+            margin-top: 60px;
+        }
+        /* Dica escondida no código-fonte (Ctrl+U) */
+        /* A terceira palavra da terceira linha do memorial é a senha */
     </style>
-  </head>
+</head>
 <body>
-  <h1>Aqui você vai reseber as noticias de Uberladia todos os dias</h1>
-  <h2 hidden >E isso que eles acha que verdade mais a verdade e que todos iram morrer no dia xx/8/xxxx</h2 hidden>
-<nav>
-        <a href="#">Início</a>
-        <a href="#noticias">noticias</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#contato">Contato</a>
-    </nav>
 
-    <div class="container" id="noticias">
-        <h2></h2>
-        <p></p>
+<div class="container">
 
-        <div class="game-list">
-            <div class="game-card">
-                <a href="imagems.html">
-                    <img src="" alt="te">
-                </a>
-                <h3></h3>
-                <p></p>
+    <header>
+        <h1>Arquivo Público Municipal<br>Departamento de Preservação Histórica</h1>
+        <p style="color:#777; margin-top:10px;">Acesso restrito a servidores autorizados</p>
+    </header>
 
-            </div>
-<div id="sobre" class="container">
-        <h2></h2>
-        <p></p>
+    <div class="notice">
+        <strong>Aviso importante</strong><br>
+        Devido à reforma do sistema de digitalização, o acesso ao acervo digital está temporariamente limitado. 
+        Pedimos desculpas pelo transtorno. A previsão de retorno é dia 17/11/2026.
     </div>
-<footer id="contato">
-        <p>&copy;</p>
-    </footer>
+
+    <h2 style="color:#a67c00">Últimas publicações disponíveis</h2>
+
+    <ul>
+        <li>Edital 042/2025 – Tombamento do casarão da Rua XV</li>
+        <li>Relatório de restauração – Igreja de São Benedito (2024)</li>
+        <li>Memorial descritivo do Solar dos Barões de 1923</li>
+        <li>Atas da comissão de patrimônio – 1º semestre 2025</li>
+    </ul>
+
+    <p class="clue">
+        <!-- Esta linha é visível mas quase invisível na página normal -->
+        <span style="opacity:0.15">acervo/1923/solar-baroes-memorial.txt</span>
+    </p>
+
+    <!-- ============================================= -->
+    <!--               ÁREA SECRETA                   -->
+    <!-- ============================================= -->
+
+    <div id="secret-area" class="hidden-section">
+
+        <h2 style="color:#c94400; text-align:center">ACESSO CONCEDIDO – NÍVEL RESTRITO</h2>
+
+        <div class="document">
+Data: 13 de julho de 1987
+Classificação: CONFIDENCIAL – Protocolo 877-41-K
+
+Assunto: Ocorrência registrada na propriedade rural “Fazenda das Três Cruzes” – km 47 da antiga BR-070
+
+Resumo:
+Às 03:17 do dia 12/07/1987, lavrador João Batista dos Santos (RG 4.812.997) compareceu à delegacia municipal relatando ter visto “luzes fortes descendo do céu” em direção ao pasto norte da fazenda.
+
+Testemunhas adicionais:
+- Maria das Dores (esposa) – confirmou clarão azul-esbranquiçado
+- Pedro Almeida (vizinho) – ouviu zumbido grave por ≈ 8 minutos
+
+Objeto encontrado:
+- Fragmento metálico irregular (≈ 3,2 kg)
+- Superfície não oxidada, gravuras geométricas não reconhecidas
+- Material encaminhado ao laboratório do Exército em Brasília (cód. amostra: XT-1987-041)
+
+Nota manuscrita (assinada Coronel RM):
+“Manter sigilo total. Não divulgar à imprensa. Contatar Núcleo-7.”
+
+Fim do relatório.
+        </div>
+
+        <p style="text-align:center; margin-top:50px; color:#555">
+            ← Documento autenticado – cadeia de custódia preservada →
+        </p>
+
+    </div>
+
+    <!-- ============================================= -->
+    <!--             FORMULÁRIO DA SENHA               -->
+    <!-- ============================================= -->
+
+    <div id="password-form">
+        <p style="margin-bottom:25px">Área de consulta restrita – digite a chave de liberação:</p>
+        <input type="password" id="senha" placeholder="chave de acesso" autocomplete="off"/>
+        <button onclick="verificarSenha()">Acessar</button>
+        <p id="erro" style="color:#c00; margin-top:15px; min-height:25px;"></p>
+    </div>
+
+</div>
+
+<script>
+function verificarSenha() {
+    const input = document.getElementById("senha").value.trim().toLowerCase();
+    const erro = document.getElementById("erro");
+    const areaSecreta = document.getElementById("secret-area");
+    const formulario = document.getElementById("password-form");
+
+    // Senha escolhida: terceira palavra da terceira linha do memorial = "não oxidada"
+    // Você pode entregar pistas físicas ou verbais que levem a isso
+    const senhaCorreta = "34567";   // ←←← ALTERE AQUI A SENHA QUE DESEJA
+
+    if (input === senhaCorreta) {
+        areaSecreta.style.display = "block";
+        formulario.style.display = "none";
+        erro.textContent = "";
+        // Opcional: scroll suave até o documento
+        areaSecreta.scrollIntoView({ behavior: "smooth" });
+    } else {
+        erro.textContent = "Chave inválida. Tente novamente.";
+    }
+}
+</script>
+
 </body>
 </html>
