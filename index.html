@@ -3,88 +3,89 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Arquivos Municipais - Setor de Documentação Histórica</title>
+    <title>Arquivos Municipais – Acesso Nível 2</title>
     <style>
         body {
             font-family: 'Georgia', serif;
-            background: #0f0f0f;
-            color: #e0d9c0;
+            background: #0a0a0a;
+            color: #d4c9a8;
             margin: 0;
-            padding: 40px;
-            line-height: 1.6;
+            padding: 30px 5%;
+            line-height: 1.7;
         }
         header {
             text-align: center;
-            border-bottom: 1px solid #4a3c1e;
-            padding-bottom: 30px;
-            margin-bottom: 40px;
+            border-bottom: 1px solid #3d2a10;
+            padding-bottom: 25px;
+            margin-bottom: 35px;
         }
-        h1 {
-            color: #c9a96e;
-            letter-spacing: 3px;
-            margin: 0;
-        }
-        .container {
-            max-width: 780px;
-            margin: 0 auto;
-        }
+        h1 { color: #b8975c; letter-spacing: 4px; }
+        .container { max-width: 820px; margin: 0 auto; }
         .notice {
-            background: #1a1200;
-            border: 1px solid #665022;
-            padding: 20px;
-            margin: 30px 0;
+            background: #140c00;
+            border: 1px solid #503819;
+            padding: 18px;
+            margin: 25px 0;
             font-style: italic;
+            color: #aa8844;
         }
-        .hidden-section {
-            display: none;
-        }
+        .hidden-section { display: none; }
         #secret-area {
-            background: #111;
-            border: 2px dashed #773300;
-            padding: 30px;
-            margin-top: 50px;
+            background: #0d0d0d;
+            border: 2px dashed #5c2a00;
+            padding: 35px;
+            margin: 45px 0;
         }
         #password-form {
             text-align: center;
-            margin: 40px 0;
+            margin: 50px 0 30px;
         }
         input[type="password"] {
             background: #000;
-            color: #ffcc66;
-            border: 1px solid #664400;
-            padding: 12px 20px;
-            font-size: 1.2em;
-            width: 280px;
-            font-family: monospace;
+            color: #ffb733;
+            border: 1px solid #5c3a11;
+            padding: 14px 24px;
+            font-size: 1.25em;
+            width: 300px;
+            font-family: 'Courier New', monospace;
+            letter-spacing: 2px;
         }
         button {
-            background: #4a3c1e;
-            color: #e0d9c0;
+            background: #3d2a10;
+            color: #d9c9a0;
             border: none;
-            padding: 12px 30px;
-            margin-left: 10px;
+            padding: 14px 34px;
+            margin-left: 12px;
             cursor: pointer;
-            font-size: 1.1em;
+            font-size: 1.15em;
         }
-        button:hover {
-            background: #665022;
-        }
+        button:hover { background: #5c411a; }
         .document {
-            background: #1a0f00;
-            padding: 30px;
-            border: 1px solid #553300;
-            white-space: pre-wrap;
+            background: #161006;
+            padding: 28px;
+            border: 1px solid #4a2e00;
             font-family: 'Courier New', monospace;
-            color: #d4b37e;
+            color: #d9b875;
+            white-space: pre-wrap;
+            line-height: 1.5;
         }
-        .clue {
-            color: #666;
-            font-size: 0.85em;
+        .clue, .clue-super-hidden {
+            color: #555;
+            font-size: 0.8em;
             text-align: right;
-            margin-top: 60px;
+            margin-top: 70px;
         }
-        /* Dica escondida no código-fonte (Ctrl+U) */
-        /* A terceira palavra da terceira linha do memorial é a senha */
+        .fragment {
+            opacity: 0.18;
+            user-select: none;
+            pointer-events: none;
+        }
+        .metadata {
+            font-size: 0.9em;
+            color: #777;
+            margin-top: 40px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -92,105 +93,99 @@
 <div class="container">
 
     <header>
-        <h1>Arquivo Público Municipal<br>Departamento de Preservação Histórica</h1>
-        <p style="color:#777; margin-top:10px;">Acesso restrito a servidores autorizados</p>
+        <h1>Arquivo Público Municipal<br>Setor de Documentação Sensível – Nível 2</h1>
+        <p style="color:#666; margin-top:12px;">Acesso restrito – protocolo fragmentado</p>
     </header>
 
     <div class="notice">
-        <strong>Aviso importante</strong><br>
-        Devido à reforma do sistema de digitalização, o acesso ao acervo digital está temporariamente limitado. 
-        Pedimos desculpas pelo transtorno. A previsão de retorno é dia 17/11/2026.
+        <strong>Comunicado oficial</strong><br>
+        Fase de testes de segurança iniciada em 03/02/2026.<br>
+        Senhas completas foram fragmentadas em múltiplos pontos do sistema.<br>
+        Apenas pessoal autorizado com visão de conjunto deve prosseguir.
     </div>
 
-    <h2 style="color:#a67c00">Últimas publicações disponíveis</h2>
-
+    <h2 style="color:#997033">Documentos recentemente indexados</h2>
     <ul>
-        <li>Edital 042/2025 – Tombamento do casarão da Rua XV</li>
-        <li>Relatório de restauração – Igreja de São Benedito (2024)</li>
-        <li>Memorial descritivo do Solar dos Barões de 1923</li>
-        <li>Atas da comissão de patrimônio – 1º semestre 2025</li>
+        <li>Relatório de avistamento – Serra do Roncador (1989)</li>
+        <li>Inventário de materiais não catalogados – depósitos 3B e 4C</li>
+        <li>Correspondência Núcleo-7 ↔ Exército (1987–1991)</li>
+        <li>Laudo metalúrgico – amostra XT-1987-041</li>
     </ul>
 
-    <p class="clue">
-        <!-- Esta linha é visível mas quase invisível na página normal -->
-        <span style="opacity:0.15">acervo/1923/solar-baroes-memorial.txt</span>
-    </p>
+    <!-- Fragmento 1 – escondido na cor quase preta -->
+    <p class="clue fragment" style="color:#0a0a0a">..3..</p>
 
-    <!-- ============================================= -->
-    <!--               ÁREA SECRETA                   -->
-    <!-- ============================================= -->
-
+    <!-- Área secreta (só aparece com a senha certa) -->
     <div id="secret-area" class="hidden-section">
-
-        <h2 style="color:#c94400; text-align:center">ACESSO CONCEDIDO – NÍVEL RESTRITO</h2>
+        <h2 style="color:#d12700; text-align:center">ACESSO LIBERADO – NÍVEL RESTRITO 2</h2>
 
         <div class="document">
-Data: 13 de julho de 1987
-Classificação: CONFIDENCIAL – Protocolo 877-41-K
+Data: 19 de outubro de 1989
+Classificação: ULTRA-SECRETO – Protocolo XT-1987-041-B
 
-Assunto: Ocorrência registrada na propriedade rural “Fazenda das Três Cruzes” – km 47 da antiga BR-070
+Assunto: Análise complementar – material recuperado Fazenda das Três Cruzes
 
-Resumo:
-Às 03:17 do dia 12/07/1987, lavrador João Batista dos Santos (RG 4.812.997) compareceu à delegacia municipal relatando ter visto “luzes fortes descendo do céu” em direção ao pasto norte da fazenda.
+Resultados do laboratório (IPD – Instituto de Pesquisas Tecnológicas / convênio Exército):
+- Composição: liga não-terrestre conhecida (Al-Mg-B com traços de elemento 115 estabilizado?)
+- Estrutura cristalina: simetria icosaédrica perfeita – impossível com tecnologia de 1987
+- Emissão: baixa radiação alfa persistente, mas sem dano biológico detectado
+- Gravuras: 7 símbolos repetidos em padrão espiral-logarítmico
 
-Testemunhas adicionais:
-- Maria das Dores (esposa) – confirmou clarão azul-esbranquiçado
-- Pedro Almeida (vizinho) – ouviu zumbido grave por ≈ 8 minutos
+Observação de campo (Major RM – Núcleo-7):
+“Objeto emite campo de baixa frequência quando exposto a campos magnéticos pulsados.
+Recomendamos transferência imediata para instalação subterrânea – Projeto Horizonte Negro.”
 
-Objeto encontrado:
-- Fragmento metálico irregular (≈ 3,2 kg)
-- Superfície não oxidada, gravuras geométricas não reconhecidas
-- Material encaminhado ao laboratório do Exército em Brasília (cód. amostra: XT-1987-041)
-
-Nota manuscrita (assinada Coronel RM):
-“Manter sigilo total. Não divulgar à imprensa. Contatar Núcleo-7.”
-
-Fim do relatório.
+Assinatura: [carimbo borrado] Coronel E.M. Vargas
         </div>
 
-        <p style="text-align:center; margin-top:50px; color:#555">
-            ← Documento autenticado – cadeia de custódia preservada →
-        </p>
-
+        <p class="metadata">← Cadeia de custódia: Núcleo-7 → Arquivo Municipal → cofre 1987-041-B → lacre intacto →</p>
     </div>
 
-    <!-- ============================================= -->
-    <!--             FORMULÁRIO DA SENHA               -->
-    <!-- ============================================= -->
-
+    <!-- Formulário da senha -->
     <div id="password-form">
-        <p style="margin-bottom:25px">senha:</p>
-        <input type="password" id="senha" placeholder="chave de acesso" autocomplete="off"/>
-        <button onclick="verificarSenha()">Acessar</button>
-        <p id="erro" style="color:#c00; margin-top:15px; min-height:25px;"></p>
+        <p style="margin-bottom:30px; font-size:1.1em">chave de acesso (5 dígitos):</p>
+        <input type="password" id="senha" placeholder="•••••" autocomplete="off" maxlength="5"/>
+        <button onclick="verificarSenha()">Verificar</button>
+        <p id="erro" style="color:#d00; margin-top:20px; min-height:28px; font-size:1.1em;"></p>
     </div>
+
+    <!-- Fragmentos escondidos em vários lugares -->
+    <!-- Fragmento 2 -->
+    <p class="clue" style="opacity:0.2">ref: XT-1987-<span class="fragment">4</span></p>
+
+    <!-- Fragmento 3 – dentro de comentário HTML -->
+    <!-- senha parte 5 – último dígito: 7 -->
+
+    <!-- Fragmento 4 – cor quase invisível no rodapé -->
+    <p class="clue-super-hidden" style="color:#111; text-align:center; margin-top:120px;">
+        seq. auxiliar: <span style="color:#0b0b0b">5</span>
+    </p>
+
+    <!-- Fragmento 5 – no title da página (barrinha do navegador) -->
+    <!-- olhe o título da aba → o 2º caractere depois do hífen é o primeiro dígito -->
 
 </div>
 
 <script>
 function verificarSenha() {
-    const input = document.getElementById("senha").value.trim().toLowerCase();
+    const input = document.getElementById("senha").value.trim();
     const erro = document.getElementById("erro");
-    const areaSecreta = document.getElementById("secret-area");
-    const formulario = document.getElementById("password-form");
+    const area = document.getElementById("secret-area");
+    const form = document.getElementById("password-form");
 
-    // Senha escolhida: terceira palavra da terceira linha do memorial = "não oxidada"
-    // Você pode entregar pistas físicas ou verbais que levem a isso
-    const senhaCorreta = "34567";   // ←←← ALTERE AQUI A SENHA QUE DESEJA
+    // A senha correta é 34567 (cada dígito em lugar diferente)
+    const senhaCorreta = "34567";
 
     if (input === senhaCorreta) {
-        areaSecreta.style.display = "block";
-        formulario.style.display = "none";
+        area.style.display = "block";
+        form.style.display = "none";
         erro.textContent = "";
-        // Opcional: scroll suave até o documento
-        areaSecreta.scrollIntoView({ behavior: "smooth" });
+        area.scrollIntoView({ behavior: "smooth", block: "start" });
     } else {
-        erro.textContent = "Chave inválida. Tente novamente.";
+        erro.textContent = "Sequência incorreta. Os fragmentos estão espalhados.";
     }
 }
 </script>
-<p class="clue-super-hidden">
-   Protocolo auxiliar: XT-1<span style="color:#0f0f0f">34567</span>-1987/041
-</p>
+
 </body>
 </html>
