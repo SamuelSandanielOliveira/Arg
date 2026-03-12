@@ -1,11 +1,191 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Arquivos Municipais – Acesso Nível 2</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background: #0a0a0a;
+            color: #d4c9a8;
+            margin: 0;
+            padding: 30px 5%;
+            line-height: 1.7;
+        }
+        header {
+            text-align: center;
+            border-bottom: 1px solid #3d2a10;
+            padding-bottom: 25px;
+            margin-bottom: 35px;
+        }
+        h1 { color: #b8975c; letter-spacing: 4px; }
+        .container { max-width: 820px; margin: 0 auto; }
+        .notice {
+            background: #140c00;
+            border: 1px solid #503819;
+            padding: 18px;
+            margin: 25px 0;
+            font-style: italic;
+            color: #aa8844;
+        }
+        .hidden-section { display: none; }
+        #secret-area {
+            background: #0d0d0d;
+            border: 2px dashed #5c2a00;
+            padding: 35px;
+            margin: 45px 0;
+        }
+        #password-form {
+            text-align: center;
+            margin: 50px 0 30px;
+        }
+        input[type="password"] {
+            background: #000;
+            color: #ffb733;
+            border: 1px solid #5c3a11;
+            padding: 14px 24px;
+            font-size: 1.25em;
+            width: 300px;
+            font-family: 'Courier New', monospace;
+            letter-spacing: 2px;
+        }
+        button {
+            background: #3d2a10;
+            color: #d9c9a0;
+            border: none;
+            padding: 14px 34px;
+            margin-left: 12px;
+            cursor: pointer;
+            font-size: 1.15em;
+        }
+        button:hover { background: #5c411a; }
+        .document {
+            background: #161006;
+            padding: 28px;
+            border: 1px solid #4a2e00;
+            font-family: 'Courier New', monospace;
+            color: #d9b875;
+            white-space: pre-wrap;
+            line-height: 1.5;
+        }
+        .clue, .clue-super-hidden {
+            color: #555;
+            font-size: 0.8em;
+            text-align: right;
+            margin-top: 70px;
+        }
+        .fragment {
+            opacity: 0.18;
+            user-select: none;
+            pointer-events: none;
+        }
+        .metadata {
+            font-size: 0.9em;
+            color: #777;
+            margin-top: 40px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-  <h1>Bem-vindo agente</h1>  
+
+<div class="container">
+
+    <header>
+        <h1>Arquivo Público Municipal<br>Setor de Documentação Sensível – Nível 2</h1>
+        <p style="color:#666; margin-top:12px;">Acesso restrito – protocolo fragmentado</p>
+    </header>
+
+    <div class="notice">
+        <strong>Comunicado oficial</strong><br>
+        Fase de testes de segurança iniciada em 03/02/2026.<br>
+        Senhas completas foram fragmentadas em múltiplos pontos do sistema.<br>
+        Apenas pessoal autorizado com visão de conjunto deve prosseguir.
+    </div>
+
+    <h2 style="color:#997033">Documentos recentemente indexados</h2>
+    <ul>
+        <li>Relatório de avistamento – Serra do Roncador (1989)</li>
+        <li>Inventário de materiais não catalogados – depósitos 3B e 4C</li>
+        <li>Correspondência Núcleo-7 ↔ Exército (1987–1991)</li>
+        <li>Laudo metalúrgico – amostra XT-1987-041</li>
+    </ul>
+
+    <!-- Fragmento 1 – escondido na cor quase preta -->
+    <p class="clue fragment" style="color:#0a0a0a">..3..</p>
+
+    <!-- Área secreta (só aparece com a senha certa) -->
+    <div id="secret-area" class="hidden-section">
+        <h2 style="color:#d12700; text-align:center">ACESSO LIBERADO – NÍVEL RESTRITO 2</h2>
+
+        <div class="document">
+Data: 19 de outubro de 1989
+Classificação: ULTRA-SECRETO – Protocolo XT-1987-041-B
+
+Assunto: Análise complementar – material recuperado Fazenda das Três Cruzes
+
+Resultados do laboratório (IPD – Instituto de Pesquisas Tecnológicas / convênio Exército):
+- Composição: liga não-terrestre conhecida (Al-Mg-B com traços de elemento 115 estabilizado?)
+- Estrutura cristalina: simetria icosaédrica perfeita – impossível com tecnologia de 1987
+- Emissão: baixa radiação alfa persistente, mas sem dano biológico detectado
+- Gravuras: 7 símbolos repetidos em padrão espiral-logarítmico
+
+Observação de campo (Major RM – Núcleo-7):
+“Objeto emite campo de baixa frequência quando exposto a campos magnéticos pulsados.
+Recomendamos transferência imediata para instalação subterrânea – Projeto Horizonte Negro.”
+
+Assinatura: [carimbo borrado] Coronel E.M. Vargas
+        </div>
+
+        <p class="metadata">← Cadeia de custódia: Núcleo-7 → Arquivo Municipal → cofre 1987-041-B → lacre intacto →</p>
+    </div>
+
+    <!-- Formulário da senha -->
+    <div id="password-form">
+        <p style="margin-bottom:30px; font-size:1.1em">chave de acesso (5 dígitos):</p>
+        <input type="password" id="senha" placeholder="•••••" autocomplete="off" maxlength="5"/>
+        <button onclick="verificarSenha()">Verificar</button>
+        <p id="erro" style="color:#d00; margin-top:20px; min-height:28px; font-size:1.1em;"></p>
+    </div>
+
+    <!-- Fragmentos escondidos em vários lugares -->
+    <!-- Fragmento 2 -->
+    <p class="clue" style="opacity:0.2">ref: XT-1987-<span class="fragment">4</span></p>
+
+    <!-- Fragmento 3 – dentro de comentário HTML -->
+    <!-- senha parte 5 – último dígito: 7 -->
+
+    <!-- Fragmento 4 – cor quase invisível no rodapé -->
+    <p class="clue-super-hidden" style="color:#111; text-align:center; margin-top:120px;">
+        seq. auxiliar: <span style="color:#0b0b0b">5</span>
+    </p>
+
+    <!-- Fragmento 5 – no title da página (barrinha do navegador) -->
+    <!-- olhe o título da aba → o 2º caractere depois do hífen é o primeiro dígito -->
+
+</div>
+
+<script>
+function verificarSenha() {
+    const input = document.getElementById("senha").value.trim();
+    const erro = document.getElementById("erro");
+    const area = document.getElementById("secret-area");
+    const form = document.getElementById("password-form");
+
+    // A senha correta é 34567 (cada dígito em lugar diferente)
+    const senhaCorreta = "34567";
+
+    if (input === senhaCorreta) {
+        area.style.display = "block";
+        form.style.display = "none";
+        erro.textContent = "";
+        area.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+        erro.textContent = "Sequência incorreta. Os fragmentos estão espalhados.";
+    }
+}
+</script>
+
 </body>
 </html>
